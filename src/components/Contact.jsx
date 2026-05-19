@@ -50,7 +50,8 @@ const Contact = () => {
     setStatus('loading');
 
     try {
-      const response = await fetch('https://formspree.io/f/mqakevve', { // Note: User should replace this with their own Formspree ID
+      const formId = import.meta.env.VITE_FORMSPREE_ID || 'mqakevve';
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

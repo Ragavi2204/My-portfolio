@@ -38,7 +38,7 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden md:flex space-x-6 lg:space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -47,7 +47,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={800}
-              className="text-[13px] uppercase tracking-[0.4em] text-gray-400 hover:text-secondary cursor-pointer transition-all duration-500 relative group font-bold"
+              className="text-[12px] uppercase tracking-[0.25em] text-gray-400 hover:text-secondary cursor-pointer transition-all duration-500 relative group font-bold"
               activeClass="text-primary scale-110"
             >
               {link.name}
@@ -55,6 +55,7 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+
 
         {/* Mobile Toggle */}
         <div className="md:hidden text-white">
